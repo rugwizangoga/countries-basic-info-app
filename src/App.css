@@ -11,7 +11,8 @@ a {
 }
 
 .app {
-  min-width: 450px;
+  width: 375px;
+  background-color: #fdb5d1;
 }
 
 .info {
@@ -22,33 +23,36 @@ a {
   margin: 0 auto;
 }
 
-h1 {
+.h1 {
   color: black;
-  font-weight: bold;
-  text-align: center;
-  margin: 30px 0 60px 0;
+  width: 90%;
+  margin: 0 auto;
   line-height: 25px;
+  font-weight: 700;
 }
 
 .name {
   color: aliceblue;
   text-align: end;
-  font-weight: bolder;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.hb {
+  font-size: 16px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   padding: 20px 0;
   background-color: #d04379;
   border-radius: 8px;
 }
 
 .flag-img {
-  height: 120px;
-  width: 170px;
+  height: 70px;
+  width: 90px;
   align-self: center;
 }
 
@@ -57,28 +61,30 @@ h1 {
 }
 
 .wmap {
-  width: 100%;
+  width: 150px;
+  height: 60px;
   max-width: 100%;
-  max-height: 550px;
-  min-height: 300px;
 }
 
-.whole {
-  min-width: 450px;
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: #d04379;
+  align-items: center;
+}
+
+/* .whole {
+  width: 375px;
   height: 100vh;
   background-color: #d04379;
-}
+} */
 
 .icon {
   align-self: flex-end;
   padding-right: 5%;
   color: white;
-}
-
-.basic {
-  font-size: 19px;
-  color: white;
-  text-align: center;
 }
 
 .back {
@@ -110,7 +116,6 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 20px;
   height: 100px;
   font-weight: bold;
 }

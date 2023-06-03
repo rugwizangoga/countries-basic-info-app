@@ -26,7 +26,7 @@ const Country = () => {
   ) : [];
 
   return (
-    <div className="whole">
+    <div className="app">
       <div className="back">
         <Link to="/">
           <SecondIcon />
@@ -39,7 +39,7 @@ const Country = () => {
         </div>
       </div>
       <div>
-        <p className="basic">Basic information</p>
+        <p className="h1">Basic information</p>
         <ul className="list">
           <li className="odd">
             <span>Population:</span>

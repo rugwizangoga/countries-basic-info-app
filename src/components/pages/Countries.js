@@ -1,14 +1,14 @@
-// Countries.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/Countries/countriesSlice';
 import Mymap from '../../assets/wmap.png';
-import Icon from '../../assets/icon';
+
+import FilterComponent from './FilterComponent';
 
 const Countries = () => {
   const countriesList = useSelector((store) => store.countries.countries);
   const dispatch = useDispatch();
+  const [filterText, setFilterText] = useState('');
 
   useEffect(() => {
     dispatch(fetchCountries());
@@ -17,25 +17,27 @@ const Countries = () => {
   const sortedCountriesList = [...countriesList]
     .sort((a, b) => a.name.common.localeCompare(b.name.common));
 
+  const handleFilterChange = (event) => {
+    setFilterText(event.target.value);
+  };
+
   return (
     <div className="app">
-      <img src={Mymap} alt="World map" className="wmap" />
-      <h1>Number of official languages per country</h1>
-      <div className="info">
-        {sortedCountriesList.map((country, index) => (
-          <Link to={`/country/${country.name.common}`} key={country.name.common}>
-            <div className={`card ${index % 3 === 1 || index % 3 === 2 ? 'alternate-bg' : ''}`}>
-              <div className="icon">
-                <Icon />
-              </div>
-              <img src={country.flags.png} alt="flag" className="flag-img" />
-              <div className="details">
-                <p className="name">{country.name.common.toUpperCase()}</p>
-                {country.languages && <p className="name">{Object.values(country.languages).length}</p>}
-              </div>
-            </div>
-          </Link>
-        ))}
+      <div className="header">
+        <img src={Mymap} alt="World map" className="wmap" />
+        <p className="name hb">worldwide languages</p>
+      </div>
+      <p className="h1">languages per country</p>
+      <div className="filter">
+        <input
+          type="text"
+          placeholder="Search countries"
+          value={filterText}
+          onChange={handleFilterChange}
+        />
+      </div>
+      <div>
+        <FilterComponent items={sortedCountriesList} filterText={filterText} />
       </div>
     </div>
   );
