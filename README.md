@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 **[countries-basic-info-app]** is a simple mobile react SPA that displays all countries around the world and the number official languages in those countries, it also provides the basic information about them like their capitals, location, currencies and so on.
 
-- Here is the introduction [video](#) about feature of the App.
+- Here is the introduction [video](https://www.loom.com/share/d2b596bc020341529f0a00490da22f68) about feature of the App.
 
 ## 🛠 Built With <a name="built-with"></a>
 
