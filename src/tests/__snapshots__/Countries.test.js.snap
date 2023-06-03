@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Country component correctly 1`] = `
+<div>
+  <div
+    class="app"
+  >
+    <img
+      alt="World map"
+      class="wmap"
+      src="wmap.png"
+    />
+    <h1>
+      Number of official languages per country
+    </h1>
+    <div
+      class="info"
+    />
+  </div>
+</div>
+`;
