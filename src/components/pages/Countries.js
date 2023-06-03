@@ -12,7 +12,7 @@ const Countries = () => {
 
   useEffect(() => {
     dispatch(fetchCountries());
-  }, []);
+  }, [dispatch]);
 
   const sortedCountriesList = [...countriesList]
     .sort((a, b) => a.name.common.localeCompare(b.name.common));
